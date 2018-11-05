@@ -1,0 +1,11 @@
+<?php
+// 数据库相关配置
+const DB_TYPE = 'mysql';
+const DB_HOST = 'mysql';
+const DB_USER = 'username';
+const DB_PWD = 'password';
+const DB_NAME = 'dbname';
+const DB_PORT = '3306';
+// 密码加盐
+const SALT = '!!SALT!!';
+const JWT_KEY = 'examplekey';

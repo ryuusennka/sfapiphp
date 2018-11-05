@@ -1,0 +1,18 @@
+{
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  },
+  "require": {
+    "phpmailer/phpmailer": "v6.0.5",
+    "nette/mail": "^2.4",
+    "zhuzhichao/ip-location-zh": "^2.4",
+    "php-curl-class/php-curl-class": "^8.1",
+    "phpdocumentor/phpdocumentor": "dev-master",
+    "firebase/php-jwt": "^5.0",
+    "phpoffice/phpspreadsheet": "^1.5",
+    "monolog/monolog": "^1.24"
+  }
+}
