@@ -41,4 +41,10 @@ class IndexController extends Controller {
     echo 'hi';
     error_log('2018年11月5日17:02:54xxxxx');
   }
+  function checkRedis(){
+    var_dump(class_exists('redis'));
+  }
+  function phpinfo(){
+    phpinfo();
+  }
 }
