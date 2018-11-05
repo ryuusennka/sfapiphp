@@ -233,6 +233,22 @@ class MailController extends Controller
 pecl 是 php 官方的扩展维护的地方
 [pecl.php.net](http://pecl.php.net/) 搜索
 php 扩展全是 c 开发的
+## 安装 redis 扩展
+
+1. 在 [http://pecl.php.net/package/redis](http://pecl.php.net/package/redis) 下载 [redis](http://pecl.php.net/get/redis-4.1.1.tgz)(这是4.1.1稳定版) 扩展
+1. 解压 redis.tar.gz
+1. 进入解压后的 `redis` 目录
+1. phpize 命令 就会在当前目录生成一个 configure 文件
+1. 找到 php-config 位置 `which php-config` output `/usr/local/bin/php-config`
+1. `./configure --with-php-config=/usr/local/bin/php-config`
+1. make && make test
+1. make install
+1. 修改 `php.ini`
+```
+[redis]
+extension="redis.so"
+```
+11. 验证 `phpinfo` 查找 redis 是否存在
 
 ## 安装 yaf 扩展
 1. 找到 php-config 位置
