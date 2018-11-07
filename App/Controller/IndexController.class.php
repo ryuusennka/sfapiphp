@@ -12,6 +12,8 @@ class IndexController extends Controller
 {
   function index()
   {
+    var_dump(PHP_OS);
+    exit;
     echo dirname(__FILE__);
     exit;
     $this->assign('uuid', createUuid());
