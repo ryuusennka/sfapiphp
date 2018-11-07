@@ -47,7 +47,7 @@ class Image
     $verify = $this->generateVerifyString($length);
     $_SESSION[$sessname] = $verify;
     // 使用了等宽字体
-    $ttf = CORE_PATH . '/Assets/fonts/Anonymous.ttf';
+    $ttf = dirname(__FILE__) . '/Image/ttf/Anonymous.ttf';
     $w = $size * $length + $size * 2;
     $hy = 2;
     $h = $size * $hy;
@@ -69,7 +69,7 @@ class Image
         $size,
         mt_rand(-30, 30),
         ($size + $size * $i),
-        ($size+$size*($hy-1)/2),
+        ($size + $size * ($hy - 1) / 2),
         imagecolorallocate($image, mt_rand(0, 99), mt_rand(0, 99), mt_rand(0, 99)),
         $ttf,
         $verify[$i]
@@ -133,7 +133,8 @@ class Image
     );
   }
 
-  function waterText () {
+  function waterText()
+  {
 
   }
 }

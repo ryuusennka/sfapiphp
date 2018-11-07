@@ -1,4 +1,7 @@
 .idea/
 .history/
-Core/Config/config.php
 vendor/
+error.log
+
+# 敏感的
+Core/Config/config.php

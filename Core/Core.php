@@ -9,9 +9,9 @@ class Core
     header("X-Powered-By: sfapiphp"); // 这是我为自己的 php 框架定义的名字
     session_start();
     spl_autoload_register('self::autoLoadClass');
-    self::setReporting();
     self::loadFile();
     self::route();
+    self::setReporting();
   }
 
   static public function autoLoadClass($className)
@@ -80,21 +80,20 @@ class Core
   static public function setReporting()
   {
     if (APP_DEBUG) {
-      error_reporting(E_ALL);
       ini_set('display_errors', 'On');
     } else {
-      error_reporting(E_ALL);
       ini_set('display_errors', 'Off');
-      ini_set('log_errors', 'On');
-      ini_set('error_log', ERRLOG_PATH . 'error.log');
     }
+    error_reporting(E_ALL);
+    ini_set('log_errors', 'On');
+    ini_set('error_log', ROOT_PATH . '/log/error.log');
   }
 
   static public function loadFile()
   {
     // 引入配置文件
-    require_once CORE_PATH . '/Config/config.php';
     require_once CORE_PATH . '/Libs/functions.php';
+    require_once CORE_PATH . '/Config/config.php';
   }
 }
 
