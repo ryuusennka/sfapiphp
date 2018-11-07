@@ -15,7 +15,6 @@ class Controller
     $this->_controller = $controller;
     $this->_action = $action;
     $this->_view = new View($controller, $action);
-    var_dump($this->_controller);
   }
 
   function assign($k, $v)
